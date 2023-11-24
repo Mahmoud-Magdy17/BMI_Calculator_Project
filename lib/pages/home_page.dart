@@ -167,6 +167,7 @@ class _HomePageState extends State<HomePage> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               CircleAvatar(
+                                backgroundColor: secondColor,
                                 child: IconButton(
                                     onPressed: () {
                                       weight--;
@@ -177,6 +178,7 @@ class _HomePageState extends State<HomePage> {
                                 minRadius: 32,
                               ),
                               CircleAvatar(
+                                backgroundColor: secondColor,
                                 child: IconButton(
                                     onPressed: () {
                                       weight++;
@@ -217,6 +219,7 @@ class _HomePageState extends State<HomePage> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               CircleAvatar(
+                                backgroundColor: secondColor,
                                 child: IconButton(
                                     onPressed: () {
                                       age--;
@@ -227,12 +230,14 @@ class _HomePageState extends State<HomePage> {
                                 minRadius: 32,
                               ),
                               CircleAvatar(
+                                backgroundColor: secondColor,
                                 child: IconButton(
                                     onPressed: () {
                                       age++;
                                       setState(() {});
                                     },
-                                    icon: Icon(Icons.plus_one_sharp)),
+                                    icon: Icon(Icons.plus_one_sharp),
+                                ),
                                 minRadius: 32,
                               )
                             ],
