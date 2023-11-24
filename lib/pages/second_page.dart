@@ -38,26 +38,29 @@ class SecondPage extends StatelessWidget {
           margin: EdgeInsets.all(32),
           width: double.infinity,
           alignment: Alignment.center,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("Gender: $gender",style: TextStyle(color: Colors.white,fontSize: 24),),
-              Text("Age: ${age}",style: TextStyle(color: Colors.white,fontSize: 24),),
-              Text("height: ${height}",style: TextStyle(color: Colors.white,fontSize: 24),),
-              Text("weight: ${weight}",style: TextStyle(color: Colors.white,fontSize: 24),),
-              Text("result BIM: ${((weight*10000)/(height*height)).toInt()}",style: TextStyle(color: Colors.white,fontSize: 24),),
-              Text("Perfect Weight: \n"
-                  "${((weight*10000)/(height*height)).toInt() < 15?'Very severely underweight':
-              (((weight*10000)/(height*height)).toInt() >= 15 && ((weight*10000)/(height*height)).toInt() <= 16)?'Severely underweight':
-              (((weight*10000)/(height*height)).toInt() >= 15 && ((weight*10000)/(height*height)).toInt() <= 16)?'Underweight':
-              (((weight*10000)/(height*height)) >= 16 && ((weight*10000)/(height*height)).toInt() <= 18.5)?'Normal (healthy weight)':
-              (((weight*10000)/(height*height)) >= 18.5 && ((weight*10000)/(height*height)) <= 25)?'Overweight':
-              (((weight*10000)/(height*height)) >= 25 && ((weight*10000)/(height*height)) <= 30)?'Obese Class I (Moderately obese)':
-              (((weight*10000)/(height*height)) >= 30 && ((weight*10000)/(height*height)) <= 35)?'Obese Class II (Severely obese)':
-              (((weight*10000)/(height*height)) >= 35 && ((weight*10000)/(height*height)) <= 40)?'Obese Class III (Very severely obese)':
-              'Underweight'
-              }",style: TextStyle(color: Colors.white,fontSize: 24),)
-            ],
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Gender: $gender",style: TextStyle(color: Colors.white,fontSize: 24),),
+                Text("Age: ${age}",style: TextStyle(color: Colors.white,fontSize: 24),),
+                Text("height: ${height}",style: TextStyle(color: Colors.white,fontSize: 24),),
+                Text("weight: ${weight}",style: TextStyle(color: Colors.white,fontSize: 24),),
+                Text("result BIM: ${((weight*10000)/(height*height)).toInt()}",style: TextStyle(color: Colors.white,fontSize: 24),),
+                Text("Perfect Weight: "
+                    "${((weight*10000)/(height*height)).toInt() < 15?'Very severely underweight':
+                (((weight*10000)/(height*height)).toInt() >= 15 && ((weight*10000)/(height*height)).toInt() <= 16)?'Severely underweight':
+                (((weight*10000)/(height*height)).toInt() >= 15 && ((weight*10000)/(height*height)).toInt() <= 16)?'Underweight':
+                (((weight*10000)/(height*height)) >= 16 && ((weight*10000)/(height*height)).toInt() <= 18.5)?'Normal (healthy weight)':
+                (((weight*10000)/(height*height)) >= 18.5 && ((weight*10000)/(height*height)) <= 25)?'Overweight':
+                (((weight*10000)/(height*height)) >= 25 && ((weight*10000)/(height*height)) <= 30)?'Obese Class I (Moderately obese)':
+                (((weight*10000)/(height*height)) >= 30 && ((weight*10000)/(height*height)) <= 35)?'Obese Class II (Severely obese)':
+                (((weight*10000)/(height*height)) >= 35 && ((weight*10000)/(height*height)) <= 40)?'Obese Class III (Very severely obese)':
+                'Underweight'
+                }",style: TextStyle(color: Colors.white,fontSize: 24),)
+              ],
+            ),
           ),
         ),
       ),
