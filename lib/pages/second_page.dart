@@ -50,13 +50,12 @@ class SecondPage extends StatelessWidget {
                 Text("result BIM: ${((weight*10000)/(height*height)).toInt()}",style: TextStyle(color: Colors.white,fontSize: 24),),
                 Text("Perfect Weight: "
                     "${((weight*10000)/(height*height)).toInt() < 15?'Very severely underweight':
-                (((weight*10000)/(height*height)).toInt() >= 15 && ((weight*10000)/(height*height)).toInt() <= 16)?'Severely underweight':
-                (((weight*10000)/(height*height)).toInt() >= 15 && ((weight*10000)/(height*height)).toInt() <= 16)?'Underweight':
-                (((weight*10000)/(height*height)) >= 16 && ((weight*10000)/(height*height)).toInt() <= 18.5)?'Normal (healthy weight)':
-                (((weight*10000)/(height*height)) >= 18.5 && ((weight*10000)/(height*height)) <= 25)?'Overweight':
-                (((weight*10000)/(height*height)) >= 25 && ((weight*10000)/(height*height)) <= 30)?'Obese Class I (Moderately obese)':
-                (((weight*10000)/(height*height)) >= 30 && ((weight*10000)/(height*height)) <= 35)?'Obese Class II (Severely obese)':
-                (((weight*10000)/(height*height)) >= 35 && ((weight*10000)/(height*height)) <= 40)?'Obese Class III (Very severely obese)':
+                (((weight*10000)/(height*height)) >= 15.0 && ((weight*10000)/(height*height)) <= 16.0)?'Underweight':
+                (((weight*10000)/(height*height)) >= 16.0 && ((weight*10000)/(height*height)) <= 18.5)?'Normal (healthy weight)':
+                (((weight*10000)/(height*height)) >= 18.5 && ((weight*10000)/(height*height)) <= 25.0)?'Overweight':
+                (((weight*10000)/(height*height)) >= 25.0 && ((weight*10000)/(height*height)) <= 30.0)?'Obese Class I (Moderately obese)':
+                (((weight*10000)/(height*height)) >= 30.0 && ((weight*10000)/(height*height)) <= 35.0)?'Obese Class II (Severely obese)':
+                (((weight*10000)/(height*height)) >= 35.0 && ((weight*10000)/(height*height)) <= 40.0)?'Obese Class III (Very severely obese)':
                 'Underweight'
                 }",style: TextStyle(color: Colors.white,fontSize: 24),)
               ],
