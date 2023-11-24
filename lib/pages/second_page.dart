@@ -21,7 +21,7 @@ class SecondPage extends StatelessWidget {
         backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Colors.black,
-          title: Text("BMI Calculator|"),
+          title: Text("BMI Calculator"),
           leading: IconButton(
             onPressed: (){
               Navigator.pushReplacementNamed(context, "theHomePage");
